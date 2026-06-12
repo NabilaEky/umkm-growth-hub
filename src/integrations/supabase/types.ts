@@ -265,6 +265,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      create_pos_transaction: {
+        Args: { _items: Json; _note?: string; _paid: number }
+        Returns: Json
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
